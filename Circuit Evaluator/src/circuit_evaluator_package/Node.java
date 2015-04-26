@@ -7,25 +7,30 @@
 package circuit_evaluator_package;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
  * @author mtbjj
  */
 public class Node {
+    private static int counter = 1;
+    private final int ID;
     private double voltage;
     private ArrayList<Terminal> connections;
     private boolean isGroundNode;
     
+    
     Node(Terminal[] terminals) {
+        ID = counter++;
         connections = new ArrayList<>();
-        for(Terminal t: terminals)
-            connections.add(t);
+        connections.addAll(Arrays.asList(terminals));
         isGroundNode = false;
         voltage = 0;
     }
     
     Node(Terminal term1, Terminal term2) {
+        ID = counter++;
         connections = new ArrayList<>();
         connections.add(term1);
         connections.add(term2);
@@ -34,14 +39,15 @@ public class Node {
     }
     
     Node(Terminal[] terminals, boolean isGroundNode) {
+        ID = counter++;
         connections = new ArrayList<>();
-        for(Terminal t: terminals)
-            connections.add(t);
+        connections.addAll(Arrays.asList(terminals));
         this.isGroundNode = isGroundNode;
         voltage = 0;
     }
     
     Node(Terminal term1, Terminal term2, boolean isGroundNode) {
+        ID = counter++;
         connections = new ArrayList<>();
         connections.add(term1);
         connections.add(term2);
@@ -83,5 +89,9 @@ public class Node {
         for(Terminal t: connections){
             System.out.println("\t" + t.toString());
         }
+    }
+    
+    int getID(){
+        return ID;
     }
 }

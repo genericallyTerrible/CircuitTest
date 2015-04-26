@@ -62,7 +62,7 @@ public class circuitEvalframe extends javax.swing.JFrame {
 * 
 *                             R1                      R3
 *                            3ohm                    1ohm
-*                         /\  /\  /\             /\  /\  /\
+*        Node 1           /\  /\  /\   Node 2    /\  /\  /\      Node 3
 *          -------------\/  \/  \/  \/----|----\/  \/  \/  \/-----|
 *          |                              |                       |
 *          |                              |                       |
@@ -80,7 +80,7 @@ public class circuitEvalframe extends javax.swing.JFrame {
 *          |                             \                      \
 *          |                              |                      |
 *          |------------------------------|----------------------|
-* 
+*                                       Node 4
 * 
 * 
 * 

@@ -45,8 +45,9 @@ public class Circuit {
     }
     
     void printNodes(){
+        System.out.println("\n--------------------------------------\n");
         for(Node n : nodes){
-           System.out.println("Node");
+           System.out.println("\nNode " + n.getID());
             n.printTerminals();
         }
     }
