@@ -86,12 +86,12 @@ public class circuitEvalframe extends javax.swing.JFrame {
 * 
 * 
 */                                        
-        circuit.connectElements(battery.terminal1, r1.terminal1);
+        circuit.connectElementsAsReference(battery.terminal1, r1.terminal1);
         circuit.connectElements(r1.terminal2, r2.terminal1);
         circuit.connectElements(r1.terminal2, r3.terminal1);
         circuit.connectElements(r3.terminal2, r4.terminal1);
         circuit.connectElements(r4.terminal2, battery.terminal2);
-        circuit.connectElements(r2.terminal2, battery.terminal2);
+        circuit.connectElementsAsReference(r2.terminal2, battery.terminal2);
         
         
         circuit.printNodes();
